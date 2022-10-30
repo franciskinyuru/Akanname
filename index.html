@@ -1,111 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
-    <body class="container container-fluid bg-body">
-        <div class="container container-fluid">
-            <div class="jumbotron jumbotron-fluid card-body bg-light">
-                <h2 class="text-left text-dark">Hi and welcome to check My Akan Name App.</h2>
-                <p>The application will take a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. </p>
-            </div>
-            <div class="card bg-light">
-                <div class="card-Title">
-                    <h4 class="text-left p-2">Check my Akan Name</h4>
-                </div>
-                <div class="card-body">
-                    <form  id="form" onsubmit="return checkname();">
-                        <span id="checkvalid" class="text-danger"></span>
-                        <div class="form-group">
-                            <label>Year</label>
-                            <input class="form-control" type="number" name="year" id="year" value="" placeholder="Enter the year you were born" required  minlength="4" maxlength="4">
-                        </div>
-                        <div class="form-group">
-                            <label>Month</label>
-                            <input class="form-control" type="number" name="month" id="month" value="" placeholder="Enter the month you were born" required minlength="1" maxlength="2">
-                        </div>
-                        <div class="form-group">
-                            <label>Day</label>
-                            <input class="form-control" type="number" onreadystatechange="return checkday();" name="day" id="day" value="" placeholder="Enter the day you were born" required minlength="1" maxlength="2">
-                        </div>
-                        <div class="form-group">
-                            <label>Choose Gender</label>
-                          <div>
-                            <input class="form-check-input" type="radio" name="gender" id="male" checked>
-                            <label> Male
-                              </label>
-                          </div>
-                         <div> 
-                            <input class="form-check-input" type="radio" name="gender" id="female">
-                            <label> Female
-                              </label>
-                         </div>
-                        </div>
-                        <div class="form-group p-2">
-                            <button type="submit" class="btn btn-primary">check name</button>
-                        </div>
-                        
-                    </form>
-                    
-                </div>
-                
-            </div>
 
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
+
+<body class="container container-fluid bg-body">
+    <div class="container container-fluid">
+        <div class="jumbotron jumbotron-fluid card-body bg-light">
+            <h2 class="text-left text-dark">
+                Hi and welcome to check My Akan Name App.
+            </h2>
+            <p>
+                The application will take a user's birthday and calculates the day of
+                the week they were born and then depending on their gender outputs
+                their Akan Name.
+            </p>
         </div>
-        <script>
-           
-    
-            function checkname() {
-            let year = document.getElementById('year').value;
-            let month = document.getElementById('month').value;
-            let day = document.getElementById('day').value;
-            let gender=document.getElementsByName('gender').value;
-            console.log(year,month,day);
-                if (day <=0 | day>31 ){
-                    alert("Enter Valid Day!");
-                    document.getElementById('day').innerHTML="Enter Valid Day!";
-                }else if(month <=0 | month >12){
-                    alert("Enter Valid Month!");
-                    document.getElementById('month').innerHTML="Enter Valid Month!"; 
-                }else{
-
-                let CC = year.slice(0,2);
+        <div class="card bg-light">
+            <div class="card-Title">
+                <h4 class="text-left p-2">Check my Akan Name</h4>
+            </div>
+            <div class="card-body">
+                <form id="form" onsubmit="return checkname();">
+                    <span id="checkvalid" class="text-danger"></span>
+                    <div class="form-group">
+                        <label>Year</label>
+                        <input class="form-control" type="number" name="year" id="year" value=""
+                            placeholder="Enter the year you were born" required minlength="4" maxlength="4" />
+                    </div>
+                    <div class="form-group">
+                        <label>Month</label>
+                        <input class="form-control" type="number" name="month" id="month" value=""
+                            placeholder="Enter the month you were born" required minlength="1" maxlength="2" />
+                    </div>
+                    <div class="form-group">
+                        <label>Day</label>
+                        <input class="form-control" type="number" onreadystatechange="return checkday();" name="day"
+                            id="day" value="" placeholder="Enter
+                                the day you were born" required minlength="1" maxlength="2" />
+                    </div>
+                    <div class="form-group">
+                        <label>Choose Gender</label>
+                        <div>
+                            <input class="form-check-input" type="radio" name="gender" id="male" checked />
+                            <label> Male </label>
+                        </div>
+                        <div>
+                            <input class="form-check-input" type="radio" name="gender" id="female" />
+                            <label> Female </label>
+                        </div>
+                    </div>
+                    <div class="form-group p-2">
+                        <button type="submit" class="btn btn-primary">check name</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkname() {
+            let year = document.getElementById("year").value;
+            let month = document.getElementById("month").value;
+            let day = document.getElementById("day").value;
+            let gender = document.getElementsByName("gender").value;
+            console.log(year, month, day);
+            if ((day <= 0) | (day > 31)) {
+                alert("Enter Valid Day!");
+                document.getElementById("day").innerHTML = "Enter Valid Day!";
+            } else if ((month <= 0) | (month > 12)) {
+                alert("Enter Valid Month!");
+                document.getElementById("month").innerHTML = "Enter Valid Month!";
+            } else {
+                let CC = year.slice(0, 2);
                 let YY = year.slice(-2);
-                console.log(CC,YY);
+                console.log(CC, YY);
                 let DD = day;
                 let MM = month;
-                console.log(year,month,day);
-                let mod = '%';
-                let dow = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
-                var male = {0:"Kwasi",1:"Kwadwo",2:"Kwabena",3:"Kwaku",4:"Yaw",5:"Kofi",6:"Kwame"};
-                var female = {0:"Akosua",1:"Adwoa",2:"Abenaa",3:"Akua",4:"Yaa",5:"Afua",6:"Ama"};
+                console.log(year, month, day);
+                let mod = "%";
+                let dow =
+                    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) %
+                    7;
+                var male = {
+                    0: "Kwasi",
+                    1: "Kwadwo",
+                    2: "Kwabena",
+                    3: "Kwaku",
+                    4: "Yaw",
+                    5: "Kofi",
+                    6: "Kwame",
+                };
+                var female = {
+                    0: "Akosua",
+                    1: "Adwoa",
+                    2: "Abenaa",
+                    3: "Akua",
+                    4: "Yaa",
+                    5: "Afua",
+                    6: "Ama",
+                };
                 var dayofweek = parseInt(dow);
-                if (gender == "male"){
-                    for (let key in male){
-                        if(key == dayofweek){
-                            alert("Your name is "+ male[key])
+                if (gender == "male") {
+                    for (let key in male) {
+                        if (key == dayofweek) {
+                            alert("Your name is " + male[key]);
                         }
-
+                    }
+                } else {
+                    for (let key in female) {
+                        if (key == dayofweek) {
+                            alert("Your name is " + female[key]);
+                        }
                     }
                 }
-                else{
-                    for (let key in female){
-                        if(key == dayofweek){
-                            alert("Your name is "+ female[key])
-                        }
-
-                    }
-                }
-
-
-                }
-                
-
             }
-        </script>
-    
-    </body>
+        }
+    </script>
+</body>
+
 </html>

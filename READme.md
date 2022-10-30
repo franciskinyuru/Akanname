@@ -20,6 +20,7 @@ The application will take a user's birthday and calculates the day of the week t
  3. Deploy
 
   To deploy the project create a git branch by the name gh-pages and do as below steps
+  
     1. git branch -M gh-pages
     2. git add .
     3. git commit -m "comments here"
