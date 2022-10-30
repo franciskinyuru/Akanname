@@ -1,4 +1,4 @@
-# Portfolio
+# Akan Names
 
 # Author - Francis Kinyuru
 
@@ -33,14 +33,22 @@ The application will take a user's birthday and calculates the day of the week t
      2. Click to navigate to the deployment page 
      3. Finally click on the view Deployment to navigate to the portfolio
 
-5. Access the site.
+5. Technologies used.
+    1. HTML5
+    2. Bootstrap 5
+    3. JavaScript
+
+6. Contact information.
+    Get in touch with me [mail](franciskinyuru26@gmail.com) or [Linkedin]()
+
+7. Access the site.
  
  ## Link 
-  View my portfolio [here](https://franciskinyuru.github.io/Akanname/)
+  View Akan name [here](https://franciskinyuru.github.io/Akanname/)
 
  ## Licence
 
- Copyright &copy; 2022, Warui Kinyuru  Released under the [MIT License ]().
+ Copyright &copy; 2022, Warui Kinyuru  Released under the [MIT License ](https://github.com/franciskinyuru/Akanname/blob/main/Licence.md).
 
 
  
