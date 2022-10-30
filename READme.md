@@ -39,7 +39,7 @@ The application will take a user's birthday and calculates the day of the week t
     3. JavaScript
 
 6. Contact information.
-    Get in touch with me [mail](franciskinyuru26@gmail.com) or [Linkedin]()
+    Get in touch with me [mail](franciskinyuru26@gmail.com) or [Linkedin](https://www.linkedin.com/in/francis-kinyuru-803075134/)
 
 7. Access the site.
  
